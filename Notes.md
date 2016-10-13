@@ -4,8 +4,6 @@
 (F) = Worth Formalizing
 (A) = Worth Interesting Analysis
 
-# = Interesting / Difficult Options
-
 ## Easy:
 * (A) Twilight Squabble
     1. Agent / Double Agent as Content not Hard-coded
