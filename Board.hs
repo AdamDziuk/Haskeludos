@@ -4,6 +4,7 @@ module Board where
 
 import Data.Maybe
 import Data.Either
+import Utils
 
 class GameState entity state where
     allEntity :: state -> [entity]
