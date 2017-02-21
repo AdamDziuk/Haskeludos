@@ -85,3 +85,13 @@ instance BoardGame TTTBoard TP TTTState where
 
     progress :: TTTBoard -> GameChange TTTState -> TTTBoard
     progress board update = board {boState = update (boState board)}
+
+evalState
+
+evalState :: TP -> TTTBoard -> (TTTBoard -> Float) -> Float
+evalState play board f = case winner of
+    Just play -> 10
+    Nothing -> (/) 10 $ sum $ Prelude.map (evalState play) (iteratePossibilities [board])
+    Just x -> -10
+    where
+        winner = checkWinner board

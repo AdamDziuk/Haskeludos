@@ -3,6 +3,7 @@ module Utils where
 import Data.Maybe
 import Data.Map
 import Data.Set
+import System.Random
 
 -- Information State Possibilities:
 --  Open (All)
@@ -18,12 +19,12 @@ data Visibility f item
     | Hidden item
     | Secret f item
 
---instance Viewable (Visibility f i) where
+-- instance Viewable (Visibility f i) where
 --    view (Open item) _ = Just item
 --    view (Hidden item) _ = Nothing
 --    view (Secret f sitem) a = case f a of
 --        True -> Just sitem
----        False -> Nothing
+--        False -> Nothing
 
 applyList :: [(a -> b)] -> a -> [b]
 
